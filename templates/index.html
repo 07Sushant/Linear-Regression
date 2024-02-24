@@ -5,40 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linear Regression - Home</title>
-    <link rel="icon" type="image/png" href="https://enally.in/images/new/logoenally.png">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
-
+   
+    {% include "headfile.html" %}
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #333; /* Set background color to dark */
-            color: #fff; /* Set text color to white */
-            margin: 0;
-            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .container {
-            max-width: 600px;
+            width: 40%;
+            height: 200px;
             margin: 50px auto;
             padding: 20px;
-            background-color: #1b1b1b;
-            border-radius: 8px;
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.32);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(13.2px);
+            -webkit-backdrop-filter: blur(13.2px);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             text-align: center;
-            animation: fadeIn 0.5s ease; /* Apply fade-in animation */
+            animation: fadeIn 0.5s ease;
+            /* Apply fade-in animation */
         }
 
         @keyframes fadeIn {
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
         }
 
         h1 {
-            color: #eee; /* Set heading color */
+            color: #eee;
+            /* Set heading color */
         }
 
         .enteryourname {
@@ -46,7 +51,8 @@
         }
 
         input[type="file"] {
-            display: none; /* Hide the file input */
+            display: none;
+            /* Hide the file input */
         }
 
         #filePlaceholder {
@@ -56,26 +62,33 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
-            background-color: #555; /* Set input background color */
-            color: #fff; /* Set input text color */
+            background-color: #555;
+            /* Set input background color */
+            color: #fff;
+            /* Set input text color */
             cursor: pointer;
             font-size: 16px;
             text-align: left;
-            transition: background-color 0.3s ease; /* Add transition effect */
+            transition: background-color 0.3s ease;
+            /* Add transition effect */
         }
 
         #filePlaceholder:hover {
-            background-color: #666; /* Change background color on hover */
-            animation: hoverEffect 0.3s ease; /* Apply hover effect animation */
+            background-color: #666;
+            /* Change background color on hover */
+            animation: hoverEffect 0.3s ease;
+            /* Apply hover effect animation */
         }
 
         @keyframes hoverEffect {
             0% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(1.1);
             }
+
             100% {
                 transform: scale(1);
             }
@@ -91,7 +104,8 @@
             cursor: pointer;
             margin: 20px;
             font-size: 18px;
-            transition: background-color 0.3s ease; /* Add transition effect */
+            transition: background-color 0.3s ease;
+            /* Add transition effect */
         }
 
         button[type="submit"]:hover {
@@ -105,23 +119,10 @@
 
         span:nth-child(2) {
             padding: 4px;
-            color: #eee; /* Set span text color */
+            color: #eee;
+            /* Set span text color */
         }
 
-        /* Footer styles */
-        footer {
-            background-color: #1b1b1b;
-            color: #fff;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-        }
-
-        footer p {
-            margin: 0;
-        }
     </style>
 </head>
 
@@ -132,7 +133,7 @@
         <form action="/process_data" method="post" enctype="multipart/form-data">
             <div class="enteryourname">
                 <label for="Upload" id="filePlaceholder">
-                     Select File...
+                    Select File...
                 </label>
                 <input type="file" id="Upload" name="file" accept=".xlsx, .xls" onchange="updatePlaceholder(this)">
                 <button type="submit">Upload <i class="fas fa-upload"></i></button>
@@ -141,26 +142,23 @@
 
         {% if file_name %}
         <form action="/delete" method="post">
-            <button type="submit"><span> Clean <i class="fad fa-quidditch"></i></span> <span>{{ file_name }}</span> </button>
+            <button type="submit"><span> Clean <i class="fad fa-quidditch"></i></span> <span>{{ file_name }}</span>
+            </button>
         </form>
         {% endif %}
 
-     
+
 
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 enally.in. All rights reserved.</p>
-    </footer>
-    <!-- End of Footer -->
+    {% include "footer.html" %}
 
     <script>
         function updatePlaceholder(input) {
             var file = input.files[0];
             var placeholder = document.getElementById('filePlaceholder');
             if (file) {
-                placeholder.innerHTML =  file.name + ' (' + formatBytes(file.size) + ')';
+                placeholder.innerHTML = file.name + ' (' + formatBytes(file.size) + ')';
             } else {
                 placeholder.textContent = 'Select File...';
             }

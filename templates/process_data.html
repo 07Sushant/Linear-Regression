@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet" />
-
+    {% include "headfile.html" %}
     <title>Linear Regression - Data Preview</title>
     <style>
         body {
@@ -115,20 +115,7 @@
             cursor: pointer;
         }
 
-        /* Footer styles */
-        footer {
-            background-color: #1b1b1b;
-            color: #fff;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-        }
-
-        footer p {
-            margin: 0;
-        }
+       
 
         @keyframes fadeIn {
             from {
@@ -190,11 +177,7 @@
     </div>
 
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 enally.in. All rights reserved.</p>
-    </footer>
-    <!-- End of Footer -->
+    {% include "footer.html" %}
 </body>
 
 </html>
