@@ -80,6 +80,15 @@ def index():
             file_name = files  # Assuming only one file is uploaded
     return render_template('index.html', files=files, file_name=file_name)  # Pass file_name to template
 
+
+
+
+@app.route('/heatMap')
+def heatMap():
+    return render_template('heatMap.html')
+
+
+
 @app.route('/process_data', methods=['POST'])
 def submit():
     create_upload_folder()
