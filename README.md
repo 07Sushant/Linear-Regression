@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 style="font-size: 36px;"><b>Data Science Projects</b></h1>
+  <h>Data Science Projects Repository</h>
 </p>
 
 ![Data Science Projects](read.png)
