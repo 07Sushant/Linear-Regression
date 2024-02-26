@@ -1,6 +1,6 @@
-<p align="center">
-  ## Data Science Projects
-</p>
+<h align="center">
+   Data Science Projects
+</h1>
 
 ![Data Science Projects](read.png)
 
