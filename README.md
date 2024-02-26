@@ -1,4 +1,8 @@
+<center>
+
 # Data Science Projects Repository
+
+</center>
 
 ![Data Science Projects](read.png)
 
