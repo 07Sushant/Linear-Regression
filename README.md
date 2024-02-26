@@ -6,8 +6,6 @@
 
 Welcome to the Data Science Projects Repository! This repository hosts a collection of diverse projects showcasing various data science techniques and applications. Below are brief descriptions of the projects included:
 
-...
-
 ## Linear Regression
 Implementing linear regression analysis to calculate the regression line, coefficients, and equations for given sample data. Additionally, this project determines the regression line of T on X, providing insights into the relationship between variables.
 
