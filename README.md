@@ -1,4 +1,10 @@
 # Data Science Projects Repository
+<br>
+![Data Science Projects](read.png)
+<br>
+Welcome to the Data Science Projects Repository! This repository hosts a collection of diverse projects showcasing various data science techniques and applications. Below are brief descriptions of the projects included:
+
+...
 
 Welcome to the Data Science Projects Repository! This repository hosts a collection of diverse projects showcasing various data science techniques and applications. Below are brief descriptions of the projects included:
 
