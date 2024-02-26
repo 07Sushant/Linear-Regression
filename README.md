@@ -1,8 +1,6 @@
-<div style="text-align:center;">
-
-# Data Science Projects
-
-</div>
+<p align="center">
+  <b>Data Science Projects Repository</b>
+</p>
 
 ![Data Science Projects](read.png)
 
