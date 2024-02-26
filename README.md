@@ -1,6 +1,6 @@
 <div style="text-align:center;">
 
-# Data Science Projects Repository
+# Data Science Projects
 
 </div>
 
