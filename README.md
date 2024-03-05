@@ -1,6 +1,7 @@
-<p align="center">
-  <h1 style="font-size: 36px;"><b>Data Science Projects</b></h1>
-</p>
+# <div align="center">Data Science Projects</div>
+### <div align="center">
+</div>
+
 
 ![Data Science Projects](read.png)
 
